@@ -108,6 +108,24 @@ body {
   outline: none;
   border: none;
 }
+.btn-color-prev {
+  color: #00e065;
+  border: 1px solid #00e065;
+}
+.btn-color-next {
+  background-color: #00e065;
+  color: #fff;
+}
+
+.next-btn-1 {
+  color: #00a0e3;
+  border: 1px solid #00a0e3;
+}
+
+.next-btn {
+  background-color: #00a0e3;
+  color: #fff;
+}
 
 /* .prev {
   margin-right: 1rem;
@@ -170,7 +188,7 @@ body {
   font-weight: 500;
 }
 
-.card-container * svg {
+* svg {
   font-size: 0.7rem;
 }
 
@@ -189,7 +207,7 @@ body {
   bottom: -0.01rem;
 }
 
-input {
+/* input {
   accent-color: #00e065;
   border: none;
 }
@@ -200,7 +218,7 @@ input-1 {
 input-2 {
   accent-color: #00e065;
   border: none;
-}
+} */
 
 @media screen and (max-width: 480px) {
   .card-section {

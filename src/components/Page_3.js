@@ -5,9 +5,6 @@ const Page_3 = () => {
   return (
     <section>
       <article className="card-container ">
-        <p className="page-1-span skip skip-1">
-          skip <FaChevronRight />
-        </p>
         <div className="card-container">
           <img src="./images/onboard_3.PNG" alt="picture" />
           <h4>

@@ -7,9 +7,6 @@ const Page_1 = () => {
   return (
     <section>
       <article className="card-container ">
-        <p className="page-1-span skip skip-1" onClick={nextBtn}>
-          skip <FaChevronRight />
-        </p>
         <div className="card-container">
           <img src="./images/onboard_1.PNG" alt="picture" />
           <h4>
