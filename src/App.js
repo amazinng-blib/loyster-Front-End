@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import { FaChevronRight, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-function App() {
+import useGlobalContest from "./useGlobalContest";
+const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  const { currpage, nextBtn, prevBtn, index, setIndex, array } =
+    useGlobalContest();
+
+  const spinner = document.getElementById("spinner");
+
+  if (spinner) {
+    setTimeout(() => {
+      spinner.style.display = "none";
+      setLoading(false);
+    }, 3000);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    !loading && (
+      <main>
+        <section>
+          <h2 className="onboard">Onbording</h2>
+          <div className="card-section">
+            {currpage}
+            <div className="navigation">
+              {index === array.length - 1 ? (
+                <button className="btn">Sign up</button>
+              ) : (
+                <button className="btn prev" onClick={prevBtn}>
+                  {" "}
+                  <FaArrowLeft /> back
+                </button>
+              )}
+              <input type="radio" />
+              <input type="radio" />
+              <input type="radio" />
+              {index === array.length - 1 ? (
+                <button className="btn">Login</button>
+              ) : (
+                <button className="btn next" onClick={nextBtn}>
+                  next <FaArrowRight />
+                </button>
+              )}
+            </div>
+          </div>
+        </section>
+      </main>
+    )
   );
-}
+};
 
 export default App;
