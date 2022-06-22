@@ -12,7 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f2c5f2;
-  transform: linear all 0.5s;
+  transform: ease all transform 0.15s;
   background-color: #e5e5e5;
   overflow-x: hidden;
 }
@@ -80,11 +80,66 @@ body {
   text-transform: uppercase;
 }
 
+.radio {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radio_input {
+  display: none;
+}
+
+.checkmark {
+  width: 1.1em;
+  height: 1.1em;
+  border: 1px solid #222;
+  border-radius: 50%;
+  box-sizing: border-box;
+  padding: 2px;
+}
+
+.checkmark-1 {
+  width: 1.1em;
+  height: 1.1em;
+  border: 1px solid #222;
+  border-radius: 50%;
+  box-sizing: border-box;
+  padding: 2px;
+}
+
+.checkmark::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: #00e065;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.15s;
+}
+.checkmark-1::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: #00a0e3;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.15s;
+}
+
+.radio_input:checked + .checkmark::after {
+  transform: scale(1);
+}
+.radio_input:checked + .checkmark-1::after {
+  transform: scale(1);
+}
+
 .form {
   margin: 3rem auto;
   width: 40%;
   display: flex;
-
   justify-content: center;
   align-items: center;
 }
@@ -98,7 +153,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
   text-transform: capitalize;
   border-radius: 25rem;
   outline: none;
@@ -175,6 +230,9 @@ body {
   cursor: pointer;
   text-transform: capitalize;
   font-weight: 500;
+  border: none;
+  outline: none;
+  background-color: transparent;
 }
 
 * svg {
@@ -193,7 +251,7 @@ body {
   content: "";
   width: 3rem;
   height: 1px;
-  bottom: -0.01rem;
+  bottom: -0.4rem;
 }
 
 /* sign up section */
@@ -292,12 +350,17 @@ body {
 
 @media screen and (max-width: 480px) {
   .card-section {
-    width: 80%;
+    width: 90%;
     margin: 2rem auto;
     border-radius: 0.4rem;
     overflow-x: hidden;
+    padding: 2rem;
   }
   .card-container {
-    width: 90%;
+    width: 100%;
+  }
+  .signup {
+    width: 80%;
+    margin: 1rem auto;
   }
 }
