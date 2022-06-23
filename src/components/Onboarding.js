@@ -28,77 +28,81 @@ const Onboarding = () => {
           </button>
           {currpage}
           <div className="navigation">
-            {index === array.length - 1 ? (
-              <button
-                onClick={() => {
-                  navigate("/signup");
-                }}
-                className="btn btn-color-prev"
-              >
-                <FaArrowLeft /> Signup
-              </button>
-            ) : (
-              <button
-                className={`btn ${
-                  index === 0 ? "btn-color-prev " : "next-btn-1"
-                }`}
-                onClick={prevBtn}
-              >
-                {" "}
-                <FaArrowLeft /> back
-              </button>
-            )}
-            <label className="radio">
-              {index === 0 && (
-                <input
-                  type="radio"
-                  name="sample"
-                  className="radio_input"
-                  checked
-                />
+            <div className="btn-container">
+              {index === array.length - 1 ? (
+                <button
+                  onClick={() => {
+                    navigate("/signup");
+                  }}
+                  className="btn btn-color-prev"
+                >
+                  <FaArrowLeft /> Signup
+                </button>
+              ) : (
+                <button
+                  className={`btn ${
+                    index === 0 ? "btn-color-prev " : "next-btn-1"
+                  }`}
+                  onClick={prevBtn}
+                >
+                  {" "}
+                  <FaArrowLeft /> back
+                </button>
               )}
-              <div className="checkmark"></div>
-            </label>
-            <label className="radio">
-              {index === 1 && (
-                <input
-                  type="radio"
-                  name="sample"
-                  className="radio_input"
-                  checked
-                />
-              )}
-              <div className="checkmark-1"></div>
-            </label>
-            <label className="radio">
-              {index === 2 && (
-                <input
-                  type="radio"
-                  name="sample"
-                  className="radio_input"
-                  checked
-                />
-              )}
-              <div className="checkmark"></div>
-            </label>
+              <label className="radio">
+                {index === 0 && (
+                  <input
+                    type="radio"
+                    name="sample"
+                    className="radio_input"
+                    checked
+                  />
+                )}
+                <div className="checkmark"></div>
+              </label>
+              <label className="radio">
+                {index === 1 && (
+                  <input
+                    type="radio"
+                    name="sample"
+                    className="radio_input"
+                    checked
+                  />
+                )}
+                <div className="checkmark-1"></div>
+              </label>
+              <label className="radio">
+                {index === 2 && (
+                  <input
+                    type="radio"
+                    name="sample"
+                    className="radio_input"
+                    checked
+                  />
+                )}
+                <div className="checkmark"></div>
+              </label>
 
-            {index === array.length - 1 ? (
-              <button
-                onClick={() => {
-                  navigate("/login");
-                }}
-                className="btn btn-color-next"
-              >
-                Login <FaArrowRight />
-              </button>
-            ) : (
-              <button
-                className={`btn ${index === 0 ? "btn-color-next" : "next-btn"}`}
-                onClick={nextBtn}
-              >
-                next <FaArrowRight />
-              </button>
-            )}
+              {index === array.length - 1 ? (
+                <button
+                  onClick={() => {
+                    navigate("/login");
+                  }}
+                  className="btn btn-color-next"
+                >
+                  Login <FaArrowRight />
+                </button>
+              ) : (
+                <button
+                  className={`btn ${
+                    index === 0 ? "btn-color-next" : "next-btn"
+                  }`}
+                  onClick={nextBtn}
+                >
+                  next <FaArrowRight />
+                </button>
+              )}
+            </div>
           </div>
         </div>
       </section>

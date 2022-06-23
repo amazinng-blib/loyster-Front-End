@@ -17,21 +17,6 @@ body {
   overflow-x: hidden;
 }
 
-.loading {
-  -webkit-animation: sk-scaleout 1s infinite ease-in-out;
-  animation: sk-scaleout 1s infinite ease-in-out;
-  /* background-color: green; */
-  border-radius: 100%;
-  height: 6rem;
-  width: 6rem;
-}
-
-.img img {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-}
-
 .container {
   -webkit-animation: background 1s infinite ease-in-out;
   animation: background 1s infinite ease-in-out;
@@ -42,6 +27,21 @@ body {
   width: 100vw;
   color: #3f5043;
   transition: all linear 3s;
+}
+
+.loading {
+  -webkit-animation: sk-scaleout 1s infinite ease-in-out;
+  animation: sk-scaleout 1s infinite ease-in-out;
+  border-radius: 100%;
+  height: 6rem;
+  width: 6rem;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  object-fit: contain;
 }
 
 @keyframes sk-scaleout {
@@ -158,6 +158,7 @@ body {
   border-radius: 25rem;
   outline: none;
   border: none;
+  box-sizing: border-box;
 }
 
 .btn:focus {
@@ -205,12 +206,16 @@ body {
 }
 
 .navigation {
+  padding: 2rem 5rem;
+  margin: 1rem auto;
+  width: 80%;
+}
+
+.btn-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
-  padding: 2rem;
-  margin-bottom: 2rem;
 }
 
 .page-1-span {
