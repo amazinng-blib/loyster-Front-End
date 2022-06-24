@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Final from "./components/Onboarding";
 import Login from "./components/Login";
 import Sign_Up from "./components/Sign_Up";
+import Forgotpwd from "./components/Forgotpwd";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
             <Route path="/" element={<Final />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Sign_Up />} />
+            <Route path="/fpwd" element ={<Forgotpwd />} />
           </Routes>
         </Router>
       )}

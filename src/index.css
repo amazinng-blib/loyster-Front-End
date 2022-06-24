@@ -369,3 +369,202 @@ body {
     margin: 1rem auto;
   }
 }
+
+
+.Home-page{
+  width: 25.9rem;
+  height: 896px;
+  background-color: rgba(243, 251, 255, 0.7);
+  margin: 0px auto;
+  padding-top: 60px;
+}
+
+.Home{
+  margin: 0px 26px ;
+  
+}
+
+.search{
+  width: 22.625rem;
+  height: 2.7rem ;
+  margin-top: 60px;
+  border-radius: 20px;
+  border: none;
+  background: #E5E5E5;
+  display: flex;
+  align-items: center;
+}
+
+.actions{
+  background: rgba(212, 242, 255, 1);
+  padding:22px ;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 25rem;
+  width:22.6rem ;
+  border-radius:5px;
+}
+
+.half{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.box{
+  background: rgba(165, 250, 174, 1);
+  height: 142px;
+  width: 128px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.box1{
+  background: rgba(134, 206, 241, 1);
+  height: 142px;
+  width: 128px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;  
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.box2{
+  background: rgba(253, 144, 144, 1);
+  height: 142px;
+  width: 128px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.box3{
+  background: rgba(243, 191, 132, 1);
+  height: 142px;
+  width: 128px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.box1 p, .box p, .box2 p, .box3 p{
+  margin-top: 0.7rem;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.top{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom{
+  margin-top: 60px;
+}
+
+.bottom p{
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom:23px ;
+}
+
+.footer{
+  width: 100%;
+  height: 120px;
+  margin-top: 90px;
+  background-image: url(../public/imgs/footer.png);
+}
+
+.pointer{
+  height: 48px;
+  width: 48px;
+  margin: 0px auto;
+  border-radius: 50%;
+  background: rgba(178, 251, 211, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-40px);
+  box-shadow: 0px 0px 20px 0px rgba(112, 111, 229, 0.5);
+}
+ 
+.search-bar{
+  position: relative;
+
+  left: 35px;
+  outline: none;
+  border: none;
+  width: 300px;
+  background-color: #E5E5E5;;
+}
+
+.s-icon{
+  font-size:20px;
+  position: relative;
+  
+  left: 20px;
+  color:rgba(41, 45, 50, 1);
+  
+}
+
+.icon1:active{
+}
+
+.top p{
+  font-size: 18px;
+}
+
+.icon{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.icon1{
+  font-size: 20px;  
+  cursor: pointer;
+  
+}
+
+.icon2{
+  cursor: pointer;
+  font-size: 20px;    
+}
+
+.icon3{
+  cursor: pointer;
+  font-size: 21px;  
+}
+
+.item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.icons{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  transform: translateY(45px);
+}
+

@@ -33,7 +33,9 @@ const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <p className="login-forgot-password">Forgot Password?</p>
+            <p className="login-forgot-password" onClick={() =>{
+              navigate("/fpwd")
+            }}>Forgot Password?</p>
           </div>
         </form>
         <button className=" sign-up-btn">Login</button>
