@@ -9,7 +9,7 @@ const Onboarding = () => {
   return (
     <main>
       <section className="card-section">
-        <h2 className="onboard">Onbording</h2>
+        <h2 className="onboard">Onboarding</h2>
         <div>
           <button
             onClick={nextBtn}

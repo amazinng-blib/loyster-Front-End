@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Final from "../src/pages/Onboarding";
 import Login from "../src/pages/Login";
 import Sign_Up from "../src/pages/Sign_Up";
@@ -25,6 +25,7 @@ const App = () => {
             <Route path="/" element={<Final />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Sign_Up />} />
+
             <Route path="/select-bank" element={<SelectBank />} />
             <Route path="/choose-mood" element={<ChooseMode />} />
             <Route path="/loading" element={<Loading />} />
