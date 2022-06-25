@@ -1,7 +1,7 @@
 import React from "react";
 import { FaChevronRight } from "react-icons/fa";
 
-const Page_3 = () => {
+const Onboard_3 = () => {
   return (
     <section>
       <article className="card-container ">
@@ -24,4 +24,4 @@ const Page_3 = () => {
   );
 };
 
-export default Page_3;
+export default Onboard_3;

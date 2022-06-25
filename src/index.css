@@ -12,7 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f2c5f2;
-  transform: ease all transform 0.15s;
+  transform: ease all 0.15s;
   background-color: #e5e5e5;
   overflow-x: hidden;
 }
@@ -261,7 +261,7 @@ body {
 
 /* sign up section */
 
-.signup {
+.page-section {
   width: 25rem;
   height: auto;
   margin: 1.5rem auto;
@@ -300,7 +300,8 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.form-control input {
+.form-control input,
+select {
   width: 100%;
   padding: 1rem 1rem;
   border-radius: 5px;
@@ -313,11 +314,12 @@ body {
 .sign-up-btn {
   margin: 0 auto;
   background-color: #b2fbd3;
-  padding: 1rem 3rem;
+  padding: 1rem 5rem;
   border: none;
   outline: none;
   cursor: pointer;
   border-radius: 5rem;
+  margin-bottom: 1.5rem;
 }
 .sign-up-btn:active {
   transform: scale(1.1);
@@ -353,6 +355,109 @@ body {
   cursor: pointer;
 }
 
+/* select bank */
+
+.page-section > p {
+  margin-top: -2rem;
+  margin-bottom: 3rem;
+  line-height: 1.5rem;
+}
+
+.select {
+  margin: 0.5rem 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+.select::after {
+  width: 100%;
+}
+
+.bank-form {
+  margin-top: 1rem;
+}
+
+.select-section {
+  height: 80%;
+  padding-top: 15rem;
+  padding-bottom: 5rem;
+}
+
+option {
+  font-size: 1rem;
+}
+
+/* Loading component */
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 100%;
+  border: 6px solid #fff;
+  border-color: #2aac6c #68c798 #63cbec;
+
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+.load {
+  margin-top: 5rem;
+}
+/* choose mode */
+.mode {
+  width: 30rem;
+  padding: 1rem 2rem;
+  margin: 2rem auto;
+  background-color: #f3fbff;
+}
+
+.mode-heading {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+.mode-heading svg {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.form-mode {
+  margin-top: 1rem;
+  margin-bottom: 15rem;
+}
+
+.form-mode div {
+  margin-bottom: 0.3rem;
+  padding: 1rem 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e5e5e5;
+  border-radius: 0.4rem;
+}
+
+.mode-btn {
+  margin: 5rem auto;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @media screen and (max-width: 480px) {
   .card-section {
     width: 90%;
@@ -361,7 +466,8 @@ body {
     overflow-x: hidden;
     padding: 2rem;
   }
-  .card-container {
+  .card-container,
+  .mode {
     width: 100%;
   }
   .signup {

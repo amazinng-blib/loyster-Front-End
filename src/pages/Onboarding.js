@@ -3,9 +3,7 @@ import { FaChevronRight, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import useGlobalContest from "../useGlobalContest";
 import { useNavigate } from "react-router-dom";
 const Onboarding = () => {
-  const { currpage, nextBtn, prevBtn, index, setIndex, array } =
-    useGlobalContest();
-  const [radio, setRadio] = useState(0);
+  const { currpage, nextBtn, prevBtn, index, array } = useGlobalContest();
 
   let navigate = useNavigate();
   return (

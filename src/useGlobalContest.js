@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Page1 from "./components/Page_1";
-import Page_2 from "./components/Page_2";
-import Page_3 from "./components/Page_3";
+import Page1 from "./components/Onboard_1";
+import Page_2 from "./components/Onboard_2";
+import Page_3 from "./components/Onboard_3";
 const useGlobalContest = () => {
   const [index, setIndex] = useState(0);
 

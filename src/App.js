@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-
-import Final from "./components/Onboarding";
-import Login from "./components/Login";
-import Sign_Up from "./components/Sign_Up";
+import Final from "../src/pages/Onboarding";
+import Login from "../src/pages/Login";
+import Sign_Up from "../src/pages/Sign_Up";
+import SelectBank from "./pages/SelectBank";
+import ChooseMode from "./components/ChooseMode";
+import Loading from "./components/Loading";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 const App = () => {
@@ -23,6 +25,9 @@ const App = () => {
             <Route path="/" element={<Final />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Sign_Up />} />
+            <Route path="/select-bank" element={<SelectBank />} />
+            <Route path="/choose-mood" element={<ChooseMode />} />
+            <Route path="/loading" element={<Loading />} />
           </Routes>
         </Router>
       )}

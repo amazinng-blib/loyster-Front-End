@@ -1,32 +1,12 @@
 import React, { useState } from "react";
 import { FaGoogle, FaInstagram } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-
-const Sign_Up = () => {
-  // const [account, setAccount] = useState({
-  //   username: "",
-  //   password: "",
-  //   reEnterPassword: "",
-  // });
-
+const Login = () => {
+  let navigate = useNavigate();
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  const [reEnterPassword, setReEnterPassword] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
-  // const handleChange = (e) => {
-  //   const name = e.target.name;
-  //   const value = e.target.value;
-
-  //   setAccount({ ...account, [name]: value });
-  // };
-
-  let navigate = useNavigate();
   return (
-    <section className="signup">
+    <section className="page-section">
       <section className="info">
         <div class="info-img">
           <img src="./loyster-logo-1.png" alt="logo" />
@@ -42,6 +22,7 @@ const Sign_Up = () => {
               name="userName"
               value={userName}
               onChange={(e) => setUserName(e.target.value)}
+              required
             />
           </div>
           <div className="form-control">
@@ -52,21 +33,18 @@ const Sign_Up = () => {
               name="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              required
             />
-          </div>
-          <div className="form-control">
-            <label htmlFor="re-enterpassword">Re-enter password</label>
-            <input
-              type="password"
-              id="re-enterpassword"
-              name="re-enterpassword"
-              value={reEnterPassword}
-              onChange={(e) => setReEnterPassword(e.target.value)}
-            />
+            <p className="login-forgot-password">Forgot Password?</p>
           </div>
         </form>
-        <button type="submit" className=" sign-up-btn" onClick={handleSubmit}>
-          Sign up
+        <button
+          className=" sign-up-btn"
+          onClick={() => {
+            navigate("/select-bank");
+          }}
+        >
+          Login
         </button>
         <div className="signup-footer">
           <span>or sign up using</span> <br />
@@ -75,15 +53,15 @@ const Sign_Up = () => {
             <FaGoogle /> <FaInstagram />{" "}
           </div>
           <p>
-            Already a user?{" "}
+            Not a user?{" "}
             <span>
               <button
                 onClick={() => {
-                  navigate("/login");
+                  navigate("/signup");
                 }}
                 className="sign-up-login"
               >
-                Login
+                Sign up
               </button>
             </span>
           </p>
@@ -93,4 +71,4 @@ const Sign_Up = () => {
   );
 };
 
-export default Sign_Up;
+export default Login;
