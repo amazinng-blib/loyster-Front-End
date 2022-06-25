@@ -4,6 +4,8 @@ import Final from "./components/Onboarding";
 import Login from "./components/Login";
 import Sign_Up from "./components/Sign_Up";
 import Forgotpwd from "./components/Forgotpwd";
+import Wallet from "./components/Wallet"
+import Home from "./components/Home"
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 const App = () => {
@@ -25,6 +27,8 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Sign_Up />} />
             <Route path="/fpwd" element ={<Forgotpwd />} />
+            <Route path= "/Home" element ={<Home></Home>} />
+            <Route path="/Wallet" element ={<Wallet />} />
           </Routes>
         </Router>
       )}
