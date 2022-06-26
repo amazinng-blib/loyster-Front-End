@@ -10,6 +10,7 @@ import SuccessMessage from "./pages/SuccessMessage";
 import Home from "./pages/Home";
 import Forgotpwd from "./pages/Forgotpwd";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -23,6 +24,11 @@ const App = () => {
   }
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Loyster</title>
+        <link rel="canonical" href="http://loyster.com/app" />
+      </Helmet>
       {!loading && (
         <Router>
           <Routes>

@@ -186,10 +186,10 @@ body {
 
 .card-section {
   width: 25rem;
-  margin: 1.5rem auto;
-  margin-bottom: 3rem;
+  margin: 0 auto;
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
   line-height: 2;
   background-color: #f1f9fd;
   border: 1px solid #f1f9fd;
@@ -263,17 +263,17 @@ body {
 
 .page-section {
   width: 25rem;
-  height: auto;
-  margin: 1.5rem auto;
-  margin-bottom: 1rem;
+  height: 100%;
+  margin: 0 auto;
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 2rem;
   background-color: #f3fbff;
 }
 
 .info {
   display: flex;
   flex-direction: column;
+  margin-top: 2rem;
 }
 
 .info-img {
@@ -417,15 +417,16 @@ option {
 .mode,
 .forgotpassword {
   width: 30rem;
-  padding: 1rem 2rem;
-  margin: 2rem auto;
+  padding: 3rem 2rem;
+  margin: 0 auto;
   background-color: #f3fbff;
 }
 
 .mode-heading {
   display: flex;
   align-items: center;
-  margin: 1rem 0;
+  margin-top: -1rem;
+  margin-bottom: 1.2rem;
 }
 .mode-heading svg {
   margin-right: 1rem;
