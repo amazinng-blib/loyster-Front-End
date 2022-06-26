@@ -350,7 +350,8 @@ select {
 
 .login-forgot-password {
   text-align: end;
-  margin-top: 0.6rem;
+  margin-top: 0;
+  margin-bottom: 2em;
   font-size: 0.8rem;
   cursor: pointer;
 }
@@ -413,7 +414,8 @@ option {
   margin-top: 5rem;
 }
 /* choose mode */
-.mode {
+.mode,
+.forgotpassword {
   width: 30rem;
   padding: 1rem 2rem;
   margin: 2rem auto;
@@ -455,24 +457,6 @@ option {
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .card-section {
-    width: 90%;
-    margin: 2rem auto;
-    border-radius: 0.4rem;
-    overflow-x: hidden;
-    padding: 2rem;
-  }
-  .card-container,
-  .mode {
-    width: 100%;
-  }
-  .signup {
-    width: 80%;
-    margin: 1rem auto;
   }
 }
 
@@ -705,4 +689,141 @@ option {
   margin-top: 30px;
   width: 100%;
   height: 58px;
+}
+
+.password {
+  position: relative;
+}
+
+.toggle-icon {
+  position: absolute;
+  top: 2.7em;
+  right: 2em;
+  color: #27a0dd;
+}
+/* card */
+.card-label {
+  margin: 1.2rem 0;
+}
+
+.date-ccv {
+  position: relative;
+}
+
+.date-ccv input {
+  padding: 0.7rem 0.6rem;
+  border: none;
+  outline: none;
+  border-radius: 0.3rem;
+  background-color: #e5e5e5;
+  cursor: pointer;
+}
+
+.date-ccv::placeholder {
+  letter-spacing: 1.1px;
+}
+
+.date-ccv label {
+  display: block;
+  text-align: start;
+  margin: 0.6rem 0;
+  letter-spacing: 1px;
+}
+
+.card-ccv {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 54%;
+  right: 0;
+  top: -0.5em;
+}
+.checkbox-1,
+.checkbox-2 {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-1 input,
+.checkbox-2 input {
+  outline: none;
+  border: none;
+}
+
+.checkbox-1 label,
+.checkbox-2 label {
+  margin-left: 0.5rem;
+}
+
+.checkbox-2 span {
+  color: #00e065;
+}
+
+/* success */
+
+.success-img-container {
+  text-align: center;
+  margin-top: 5rem;
+}
+.success-img-container img {
+  max-width: 100%;
+  width: 350px;
+  object-fit: contain;
+}
+.success-text {
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  line-height: 3;
+  padding: 0 3rem;
+}
+
+.success-text p {
+  text-align: start;
+  font-size: 0.8rem;
+}
+.success-p {
+  cursor: pointer;
+  font-size: 0.7rem;
+  text-align: center;
+  margin-top: -1rem;
+  letter-spacing: 1px;
+}
+
+/* forgot password */
+
+.forgotpassword {
+  width: 26rem;
+  max-width: 85%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20rem;
+}
+.pwd {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+@media screen and (max-width: 480px) {
+  .card-section {
+    width: 90%;
+    margin: 2rem auto;
+    border-radius: 0.4rem;
+    overflow-x: hidden;
+    padding: 2rem;
+  }
+  .card-container,
+  .mode {
+    width: 100%;
+  }
+  .signup {
+    width: 80%;
+    margin: 1rem auto;
+  }
 }

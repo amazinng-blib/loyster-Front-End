@@ -1,6 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { BsArrowLeft } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
+
 const ChooseMode = () => {
+  let navigate = useNavigate();
+
   return (
     <article className="mode">
       <div className="mode-container">
@@ -28,7 +32,14 @@ const ChooseMode = () => {
             <input type="radio" id="ussd" name="radio" />
           </div>
         </form>
-        <button className=" sign-up-btn btn mode-btn">Continue</button>
+        <button
+          className=" sign-up-btn btn mode-btn"
+          onClick={() => {
+            navigate("/card");
+          }}
+        >
+          Continue
+        </button>
       </div>
     </article>
   );

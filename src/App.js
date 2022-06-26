@@ -3,8 +3,12 @@ import Final from "../src/pages/Onboarding";
 import Login from "../src/pages/Login";
 import Sign_Up from "../src/pages/Sign_Up";
 import SelectBank from "./pages/SelectBank";
-import ChooseMode from "./components/ChooseMode";
+import ChooseMode from "./pages/ChooseMode";
 import Loading from "./components/Loading";
+import Card from "./pages/Card";
+import SuccessMessage from "./pages/SuccessMessage";
+import Home from "./pages/Home";
+import Forgotpwd from "./pages/Forgotpwd";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 const App = () => {
@@ -29,6 +33,10 @@ const App = () => {
             <Route path="/select-bank" element={<SelectBank />} />
             <Route path="/choose-mood" element={<ChooseMode />} />
             <Route path="/loading" element={<Loading />} />
+            <Route path="/card" element={<Card />} />
+            <Route path="/success" element={<SuccessMessage />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/fpwd" element={<Forgotpwd />} />
           </Routes>
         </Router>
       )}

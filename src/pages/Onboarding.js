@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaChevronRight, FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import useGlobalContest from "../useGlobalContest";
+import useGlobalContest from "../hooks/useGlobalContest";
 import { useNavigate } from "react-router-dom";
 const Onboarding = () => {
   const { currpage, nextBtn, prevBtn, index, array } = useGlobalContest();

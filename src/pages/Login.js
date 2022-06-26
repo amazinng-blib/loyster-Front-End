@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import { FaGoogle, FaInstagram } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+
+import useToggleHooks from "../hooks/useToggleHook";
 const Login = () => {
   let navigate = useNavigate();
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
+
+  const { iconToggle, passwordToggle } = useToggleHooks();
+
   return (
     <section className="page-section">
       <section className="info">
@@ -25,20 +30,25 @@ const Login = () => {
               required
             />
           </div>
-          <div className="form-control">
+          <div className="form-control password">
             <label htmlFor="password">Password</label>
             <input
-              type="password"
+              type={passwordToggle}
               id="password"
               name="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              required
             />
-            <p className="login-forgot-password" onClick={() =>{
-              navigate("/fpwd")
-            }}>Forgot Password?</p>
+            <span className="toggle-icon">{iconToggle}</span>
           </div>
+          <p
+            className="login-forgot-password"
+            onClick={() => {
+              navigate("/fpwd");
+            }}
+          >
+            Forgot Password?
+          </p>
         </form>
         <button
           className=" sign-up-btn"

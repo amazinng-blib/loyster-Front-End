@@ -3,7 +3,6 @@ import React from "react";
 const BankList = () => {
   return (
     <>
-      <label> Bank</label>
       <select className="select" id="bank">
         <optgroup>
           <option disabled selected>

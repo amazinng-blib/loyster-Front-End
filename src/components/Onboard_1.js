@@ -1,9 +1,7 @@
 import React from "react";
 import { FaChevronRight } from "react-icons/fa";
-import useGlobalContest from "../useGlobalContest";
 
 const Onboard_1 = () => {
-  const { nextBtn } = useGlobalContest();
   return (
     <section>
       <article className="card-container ">

@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import BankList from "../components/BankList";
-import Loading from "../components/Loading";
-import ChooseMode from "../components/ChooseMode";
 import { useNavigate } from "react-router-dom";
 const SelectBank = () => {
   const [accountNum, setAccountNum] = useState("");
@@ -29,8 +27,10 @@ const SelectBank = () => {
         Please select the bank Account you would love to link to your Loyster
         Account
       </p>
-
-      <BankList />
+      <div>
+        <label> Select Bank</label>
+        <BankList />
+      </div>
       <div className="bank-form form-control">
         <label Htmlfor="accountNumber">Enter Account No</label>
         <input
