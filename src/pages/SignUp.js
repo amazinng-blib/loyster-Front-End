@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaGoogle, FaInstagram } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-const Sign_Up = () => {
+const SignUp = () => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [reEnterPassword, setReEnterPassword] = useState("");
@@ -30,7 +30,6 @@ const Sign_Up = () => {
               name="userName"
               value={userName}
               onChange={(e) => setUserName(e.target.value)}
-              required
             />
           </div>
           <div className="form-control">
@@ -84,4 +83,4 @@ const Sign_Up = () => {
   );
 };
 
-export default Sign_Up;
+export default SignUp;

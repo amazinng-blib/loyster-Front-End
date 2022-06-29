@@ -72,6 +72,29 @@ body {
   overflow-x: hidden;
 }
 
+/* media query */
+
+@media screen and (max-width: 500px) {
+  .card-section {
+    width: 100%;
+    margin: 2rem auto;
+    border-radius: 0.4rem;
+    overflow-x: hidden;
+    padding: 2rem;
+  }
+  .card-container,
+  .mode {
+    width: 100%;
+  }
+  .signup {
+    width: 80%;
+    margin: 1rem auto;
+  }
+  .page-section {
+    width: 100%;
+  }
+}
+
 .onboard {
   display: flex;
   justify-content: center;
@@ -159,6 +182,7 @@ body {
   outline: none;
   border: none;
   box-sizing: border-box;
+  letter-spacing: 1px;
 }
 
 .btn:focus {
@@ -263,10 +287,13 @@ body {
 
 .page-section {
   width: 25rem;
-  height: 100%;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
   margin: 0 auto;
-  border-radius: 1rem;
-  padding: 2rem;
+  padding-top: 3rem;
+
+  padding-bottom: 0;
   background-color: #f3fbff;
 }
 
@@ -291,6 +318,7 @@ body {
 .input {
   margin-top: 5rem;
   display: block;
+  padding: 0 2rem;
 }
 .form-control {
   margin-bottom: 2rem;
@@ -383,6 +411,8 @@ select {
   height: 80%;
   padding-top: 15rem;
   padding-bottom: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 option {
@@ -582,6 +612,7 @@ option {
   width: 100%;
   height: 120px;
   margin-top: 90px;
+  margin-bottom: 0;
   background-image: url(../public/imgs/footer.png);
 }
 
@@ -644,6 +675,7 @@ option {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 
 .icons {
@@ -784,7 +816,8 @@ option {
 
 .success-text p {
   text-align: start;
-  font-size: 0.8rem;
+  font-size: 1.06rem;
+  line-height: 1.4;
 }
 .success-p {
   cursor: pointer;
@@ -811,20 +844,82 @@ option {
   margin: 1rem 0;
 }
 
-@media screen and (max-width: 480px) {
-  .card-section {
-    width: 90%;
-    margin: 2rem auto;
-    border-radius: 0.4rem;
-    overflow-x: hidden;
-    padding: 2rem;
-  }
-  .card-container,
-  .mode {
-    width: 100%;
-  }
-  .signup {
-    width: 80%;
-    margin: 1rem auto;
-  }
+/* otp */
+
+.otp-container {
+  text-align: center;
+  padding: 2rem 1rem;
+  padding-bottom: 4rem;
+}
+
+.img-div {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.img-div img {
+  max-width: 100%;
+  width: 350px;
+  object-fit: contain;
+}
+
+.otp-field {
+  width: 10%;
+  margin: 2rem 0;
+  padding: 0.5rem 0.2rem;
+  margin-left: 1rem;
+  text-align: center;
+  border-radius: 0.2rem;
+  border: 1px solid #00e065;
+  outline: none;
+}
+
+.resend::after {
+  content: "";
+  display: block;
+  background-color: rgb(206, 203, 203);
+  width: 5rem;
+  height: 1px;
+  margin: 0 auto;
+}
+
+/* new password */
+
+.newpassword {
+  text-align: center;
+  padding: 4rem 3rem;
+  padding-top: 15rem;
+  width: 25rem;
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: sans-serif;
+  background-color: #f3fbff;
+}
+
+.newpassword input {
+  width: 100%;
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: #e5e5e5;
+}
+
+.newpassword p {
+  text-align: start;
+  opacity: 0.9;
+}
+
+.newpassword label {
+  text-align: start;
+}
+
+.footer-component {
+  width: 100%;
+}
+
+/* saved-card */
+.saved-card {
+  background-color: red;
 }

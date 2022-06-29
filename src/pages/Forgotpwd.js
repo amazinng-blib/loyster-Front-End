@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Forgotpwd = () => {
   const [fpwd, setFpwd] = useState("");
+  let navigate = useNavigate();
+
   return (
     <div className="forgotpassword-section fwd-background">
       <div className="forgotpassword">
@@ -18,7 +21,14 @@ const Forgotpwd = () => {
             autoComplete="off"
           />
         </div>
-        <button className=" sign-up-btn btn">Continue</button>
+        <button
+          className=" sign-up-btn btn"
+          onClick={() => {
+            navigate("/otp");
+          }}
+        >
+          Continue
+        </button>
       </div>
     </div>
   );

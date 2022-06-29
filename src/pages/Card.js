@@ -1,5 +1,5 @@
 import React from "react";
-import { BsArrowLeft, BsCreditCard } from "react-icons/bs";
+import { BsArrowLeft } from "react-icons/bs";
 import BankList from "../components/BankList";
 import { useNavigate } from "react-router-dom";
 

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Otp = () => {
+const SetPinOtp = () => {
   const [otp, setOtp] = useState(new Array(5).fill(""));
+
   let navigate = useNavigate();
 
   const handleChange = (element, index) => {
@@ -44,7 +45,7 @@ const Otp = () => {
         })}
         <button
           className=" sign-up-btn btn"
-          onClick={() => navigate("/newpassword")}
+          onClick={() => navigate("/pin_success")}
         >
           Continue
         </button>
@@ -56,4 +57,4 @@ const Otp = () => {
   );
 };
 
-export default Otp;
+export default SetPinOtp;
