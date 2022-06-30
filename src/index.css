@@ -17,17 +17,16 @@ body {
   overflow-x: hidden;
 }
 
-
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button{
+input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-input[type=number]{
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
@@ -83,7 +82,9 @@ button{
 }
 
 .main-section {
+  width: 100%;
   overflow-x: hidden;
+  text-align: center;
 }
 
 /* media query */
@@ -622,7 +623,7 @@ option {
   margin-bottom: 23px;
 }
 
-.foot-hold{
+.foot-hold {
   position: relative;
 }
 
@@ -650,12 +651,12 @@ option {
   transform: translateY(-28px);
   margin: 0px auto;
   box-sizing: content-box;
-  
+
   box-shadow: 0px 0px 20px 0px rgba(112, 111, 229, 0.5);
 }
 
-.pointer::after{
-  content:"";
+.pointer::after {
+  content: "";
   width: 20px;
   height: 10px;
   background-color: white;
@@ -664,8 +665,8 @@ option {
   box-shadow: 0px -3.5px 0 0 rgba(243, 251, 255, 0.7);
 }
 
-.pointer::before{
-  content:"";
+.pointer::before {
+  content: "";
   width: 20px;
   height: 10px;
   background-color: white;
@@ -992,51 +993,49 @@ option {
   align-items: center;
 }
 
-
-.foot-hold{
+.foot-hold {
   transform: translateY(140px);
 }
 
-.curves{
+.curves {
   display: flex;
   position: relative;
   top: 138px;
 }
 
-.curve1{
+.curve1 {
   width: 50%;
   height: 58px;
   background-color: white;
 }
 
-.curve1::before{
+.curve1::before {
   content: " ";
   width: 40px;
   height: 40px;
-  background-color:rgba(243, 251, 255, 1);
+  background-color: rgba(243, 251, 255, 1);
   display: flex;
-  border-bottom-left-radius:170% ;
+  border-bottom-left-radius: 170%;
   position: relative;
   left: 81%;
 }
 
-.c-s{
-  padding:26px;
+.c-s {
+  padding: 26px;
 }
 
-.p-naira{
+.p-naira {
   margin: 0px auto;
   transform: translateY(300px);
 }
 
-.curve2{
+.curve2 {
   width: 50%;
   height: 58px;
   background-color: white;
-
 }
 
-.curve2::after{
+.curve2::after {
   content: " ";
   width: 10px;
   height: 10px;
@@ -1048,22 +1047,22 @@ option {
   border-top-left-radius: 10px;
 }
 
-.curve2::before{
+.curve2::before {
   content: " ";
   width: 40px;
   height: 40px;
-  background-color:rgba(243, 251, 255, 1);
+  background-color: rgba(243, 251, 255, 1);
   display: flex;
-  border-bottom-right-radius:170% ;
+  border-bottom-right-radius: 170%;
 }
 
-.Wpage1{
+.Wpage1 {
   display: flex;
   margin: 26px;
-  align-items:center ;
+  align-items: center;
 }
 
-.midbtns{
+.midbtns {
   margin: 0px auto;
   display: flex;
   flex-direction: column;
@@ -1072,101 +1071,99 @@ option {
   transform: translateY(300px);
 }
 
-.f-button{
-  background-color: #B2FBD3;
+.f-button {
+  background-color: #b2fbd3;
   width: 246px;
   height: 58px;
   border: none;
-  border-radius:30px;
+  border-radius: 30px;
   margin-bottom: 35px;
 }
 
-.t-down{
+.t-down {
   position: relative;
   transform: translateY(485px);
 }
 
-.choose{
+.choose {
   display: flex;
   margin: 0px 26px;
 }
 
-.network{
-  width:fit-content ;
+.network {
+  width: fit-content;
   height: fit-content;
   padding: 18px;
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   display: flex;
   align-items: center;
   cursor: pointer;
-
 }
 
-.networks{
-  width:fit-content ;
+.networks {
+  width: fit-content;
   height: fit-content;
   padding: 18px;
   background-color: rgba(178, 251, 211, 1);
   display: flex;
   align-items: center;
   cursor: pointer;
-
 }
 
-.network:hover, .network:active, .network:focus{
+.network:hover,
+.network:active,
+.network:focus {
   background-color: rgba(178, 251, 211, 1);
 }
 
-.network p{
+.network p {
   margin-left: 5px;
 }
 
-.E-amount{
+.E-amount {
   margin: 30px 18px;
   display: flex;
   flex-direction: column;
 }
 
-.t-number{
-  
-  width:370px;
+.t-number {
+  width: 370px;
   height: 65px;
 }
 
-.mid-bttns{
+.mid-bttns {
   display: flex;
   justify-content: center;
   transform: translateY(20px);
 }
 
-.foot-1{
+.foot-1 {
   transform: translateY(153px);
 }
 
-.none{
-  display:none;
+.none {
+  display: none;
 }
 
-.onshow{
+.onshow {
   display: flex;
   flex-direction: column;
-  
 }
 
-.onshow p{
+.onshow p {
   margin: 0px 26px;
 }
 
-.buycredit{
+.buycredit {
   display: flex;
   flex-direction: column;
   margin: 0px 26px;
 }
 
-.gray{
+.gray {
   display: flex;
-  background-color: #E5E5E5;
-  width:364px;
+  background-color: #e5e5e5;
+  width: 364px;
   height: 65px;
   justify-content: space-between;
   padding-left: 15px;
