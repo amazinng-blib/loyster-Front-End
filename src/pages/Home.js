@@ -1,4 +1,4 @@
-import Footer from "../components/Footer";
+import Footer from "../components/Footer"
 import { BiBell } from "react-icons/bi";
 import { useState } from "react";
 import { useNavigate } from "react-router";
@@ -60,6 +60,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* still working on the footer */}
       <Footer />
     </div>
   );

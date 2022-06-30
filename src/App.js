@@ -21,6 +21,9 @@ import FundChooseMode from "./pages/FundChooseMode";
 import FundAmount from "./pages/FundAmount";
 import FundCard from "./pages/FundCard";
 import SavedCard from "./components/SavedCard";
+import Airtime from "./pages/Airtime";
+import Data from "./pages/Data"
+import BuyCredit from "./pages/BuyCredit";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -45,7 +48,9 @@ const App = () => {
             <Route path="/" element={<Final />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
-
+            <Route path="/Data" element={<Data />} />
+            <Route path="/BuyCredit" element={<BuyCredit />} />
+            <Route path="/Airtime" element={<Airtime />} />    
             <Route path="/select-bank" element={<SelectBank />} />
             <Route path="/choose-mood" element={<ChooseMode />} />
             <Route path="/loading" element={<Loading />} />
