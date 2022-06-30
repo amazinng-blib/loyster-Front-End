@@ -5,6 +5,15 @@ import { useNavigate } from "react-router-dom";
 const FundAmount = () => {
   const [amount, setAmount] = useState("X");
   let navigate = useNavigate();
+
+  // const handleNav = () => {
+  //   if (value) {
+  //     navigate("/savedcard");
+  //   } else {
+  //     navigate("/fundcard");
+  //   }
+  // };
+
   return (
     <div className="page-section">
       <form className="input">

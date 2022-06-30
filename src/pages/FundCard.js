@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BsArrowLeft } from "react-icons/bs";
 import useLocalStorage from "../hooks/useLocalStorage";
+import SavedCard from "../components/SavedCard";
 const FundCard = () => {
   const [cardDetails, setCardDetails] = useState({
     number: "",
@@ -10,8 +11,14 @@ const FundCard = () => {
   });
 
   const [card, setCard] = useLocalStorage("data", []);
+  const [show, setShow] = useState(false);
 
-  const [select, setSelect] = useState("");
+  if (card.number) {
+    setShow(!show);
+  }
+
+  const [select, setSelect] = useState("bank", "");
+
   let navigate = useNavigate();
   let name, value;
   const handleInputs = (e) => {
@@ -26,6 +33,11 @@ const FundCard = () => {
     }
   };
 
+  const removeCard = (id) => {
+    const newCard = card.filter((data) => data.id !== id);
+    setCard(newCard);
+  };
+
   return (
     <article className="mode">
       <div>
@@ -34,9 +46,7 @@ const FundCard = () => {
           <BsArrowLeft />
           <p>Set Up Account</p>
         </div>
-
         <p>Please Enter Your Card Information</p>
-
         <div className="form-control">
           <label htmlFor="number" className="card-label">
             Card No
@@ -151,7 +161,16 @@ const FundCard = () => {
           <input type="checkbox" name="checkbox" onChange={onClick} />
           <label>Save Card Information</label>
         </div>
-
+        {show && (
+          <div className="saved-card">
+            <header>
+              <p>Amount Due </p>
+              <p>#100</p>
+            </header>
+            <p>Selected Saved Card</p>
+            <SavedCard card={card} bank={select} removeCard={removeCard} />
+          </div>
+        )}
         <button
           className=" sign-up-btn btn mode-btn"
           onClick={() => navigate("/savedcard")}

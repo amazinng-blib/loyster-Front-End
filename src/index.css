@@ -920,6 +920,30 @@ option {
 }
 
 /* saved-card */
+
 .saved-card {
-  background-color: red;
+  margin-top: 3rem;
+}
+
+.saved-card header {
+  display: flex;
+  justify-content: space-between;
+  color: red;
+  align-items: center;
+}
+
+.saved-card-container {
+  margin-top: 1rem;
+  background-color: rgb(184, 177, 177);
+  padding: 1rem 0.9rem;
+}
+
+.saved-card-container span {
+  margin-left: 1rem;
+}
+
+.saved-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
